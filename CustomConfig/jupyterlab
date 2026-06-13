@@ -1,0 +1,11 @@
+#!/bin/bash
+
+pgrep -f jupyter-lab >/dev/null || \
+    /usr/bin/jupyter-lab >/tmp/jupyterlab.log 2>&1 &
+
+sleep 3
+
+exec chromium --incognito \
+    --ozone-platform=wayland \
+    --enable-features=UseOzonePlatform \
+    --app=http://127.0.0.1:8888/lab

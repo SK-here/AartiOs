@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# The script is create by SK 
+
+if [[ $EUID -ne 0 ]]; then
+   echo "Run as root: sudo $0"
+   exit 1
+fi
+
+echo "<<<< BEFORE >>>>"
+free -h
+
+echo "<<<< Dropping Cache... >>>>"
+
+sleep 5
+
+echo "<<<< Dropped Cache See... >>>>"
+
+sync
+
+echo 3 > /proc/sys/vm/drop_caches
+
+echo "<<<< AFTER >>>>"
+
+free -h
+
+echo "Caches dropped successfully."

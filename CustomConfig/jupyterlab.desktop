@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=JupyterLab
+Comment=Run JupyterLab
+Exec=/usr/local/bin/jupyterlab
+Terminal=false
+Type=Application
+Icon=jupyterlab
+StartupNotify=true
+MimeType=application/x-ipynb+json;
+Categories=Development;
+Keywords=python;

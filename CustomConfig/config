@@ -1,0 +1,5 @@
+export VOLUME_LIMIT=150
+export VOLUME_BOOST=true
+export WALLPAPER_CUSTOM_PATHS=("/usr/share/wallpapers")
+export WALLPAPER_BACKEND="awww"
+export WEATHER_LOCATION="Indore"

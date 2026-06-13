@@ -1,0 +1,64 @@
+window#waybar #workspaces {
+    background-color: rgba(255, 255, 255, 0.06);  /* container pill */
+    border-radius: 999px;
+
+    padding: 2px 4px;   /* IMPORTANT: creates GNOME spacing feel */
+    
+    margin: 4px 6px;
+
+    /* subtle GNOME shell-like depth */
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+/* Workspace buttons */
+window#waybar #workspaces button {
+    color: transparent;
+
+    background-color: rgba(255, 255, 255, 0.18);
+
+    border: none;
+    box-shadow: none;
+
+    min-width: 8px;
+    min-height: 8px;
+
+    margin: 0 2px;  /* capsule spacing */
+
+    border-radius: 999px;
+
+    opacity: 1;
+
+    transition: all 0.2s ease;
+}
+
+/* Hover */
+window#waybar #workspaces button:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+    opacity: 1;
+}
+
+/* Active workspace (GNOME focused pill) */
+window#waybar #workspaces button.active {
+    background-color: rgba(255, 255, 255, 0.821);
+
+    min-width: 5px;
+    min-height: 10px;
+
+    opacity: 1;
+}
+
+/* Visible (open windows) */
+window#waybar #workspaces button.visible {
+    background-color: rgba(255, 255, 255, 0.809);
+    opacity: 1;
+}
+
+/* Urgent */
+window#waybar #workspaces button.urgent {
+    background-color: #ff5a5f;
+    opacity: 1;
+}
+
+#workspaces button.active {
+    background-color: white;
+}

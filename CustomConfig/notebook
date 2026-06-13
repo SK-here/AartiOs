@@ -1,0 +1,11 @@
+#!/bin/bash
+
+pgrep -f jupyter-notebook >/dev/null || \
+    /usr/bin/jupyter-notebook >/tmp/jupyter-notebook.log 2>&1 &
+
+sleep 3
+
+exec chromium --incognito \
+    --ozone-platform=wayland \
+    --enable-features=UseOzonePlatform \
+    --app=http://127.0.0.1:8888/lab
